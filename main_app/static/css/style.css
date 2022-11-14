@@ -1,0 +1,50 @@
+html {
+  font-family: Merriweather;
+  color: #222093;
+}
+
+#banner {
+  background-color: #f8e7f8;
+  color: #222093;
+  height: 200px;
+  padding: 1em 3em;
+  box-shadow: none;
+}
+
+#text-color-brand {
+  color: #222093;
+  font-weight: bold;
+}
+#text-color {
+  color: #222093;
+}
+#roboto {
+  font-family: Roboto;
+}
+body {
+  background-color: #f8e7f8;
+}
+
+#home {
+  padding: 0em 2em;
+}
+#title {
+  font-weight: bold;
+}
+
+.bg {
+  background-color: #f8e7f8;
+}
+
+#card-color {
+  background-color: #1f1f7c;
+}
+
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+.input-field label {
+  color: #000;
+}
