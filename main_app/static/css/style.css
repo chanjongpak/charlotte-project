@@ -34,18 +34,27 @@ body {
 
 .bg {
   background-color: #f8e7f8;
+  border-radius: 25px;
 }
 
 #card-color {
   background-color: #1f1f7c;
-}
-
-.input-field input[type="text"].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+  border-radius: 25px;
 }
 
 .input-field label {
   color: #000;
+}
+.shadow {
+  box-shadow: #1f1f7c 10px 10px 10px;
+}
+
+#textarea1 {
+  opacity: 0.25;
+  border-bottom: none;
+}
+
+#no-bottom-border {
+  border-bottom: none;
 }
 
