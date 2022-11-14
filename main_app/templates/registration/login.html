@@ -1,13 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
-<div id="card-content"></div>
-<a id="text-color-brand">Charlotte.</a>
-<img src="/main_app/static/images/Charlotte..png" />
-<p id="text-color-brand">Welcome back to the web!</p>
+<div class="card">
+  <img src="" style="width: 50%" />
+  <div class="container">
+    <div id="card-content"></div>
+    <a id="text-color-brand">Charlotte.</a>
+    <img src="/main_app/static/images/Charlotte..png" />
+    <p id="text-color-brand">Welcome back to the web!</p>
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-  {% endblock %}
-</form>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" class="btn" value="login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+      {% endblock %}
+    </form>
+  </div>
+</div>
