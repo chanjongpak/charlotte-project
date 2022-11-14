@@ -1,0 +1,14 @@
+#banner {
+  background-color: #f8e7f8;
+  color: #222093;
+  height: 200px;
+  padding: 1px;
+}
+
+div > ul > li {
+  color: #222093;
+}
+
+#text-color {
+  color: #222093;
+}
