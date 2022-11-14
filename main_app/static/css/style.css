@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-/* colors: 
-#F8E7F8  (faint pink)
-#1F1F7C (indigo)
-#472EFF (blueish)
-#F4DB5 (yellow)
-#E499CF (pink)
-*/
-
-/* font:
-Merriweather
-Merriweather Sans */
-=======
 html {
   font-family: Merriweather;
   color: #222093;
@@ -61,4 +48,4 @@ body {
 .input-field label {
   color: #000;
 }
->>>>>>> e3c2b183c59119d5ee7fdd9868c0930463e8676e
+
