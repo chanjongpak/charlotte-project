@@ -15,31 +15,36 @@
       href="{% static 'css/style.css' %}"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+      </style> 
   </head>
   <body>
     <div class="navbar-fixed s12 l3">
       <nav id="banner">
         <div class="nav-wrapper">
-          {% if user.is_authenticated %}
-          <ul class="right">
-            <li>
+          <ul>
+            {% if user.is_authenticated %}
+            <li class="right">
               <a id="text-color" href="{% url 'logout' %}">Sign Out</a>
             </li>
+            <br/>
+            <div id="roboto">Welcome {{user}}!</div>
             {% else %}
-            <li>
+            <li class="right">
               <a id="text-color" href="{% url 'login' %}">Sign In</a>
             </li>
-            <li>
+            <li class="right">
               <a id="text-color" href="{% url 'signup' %}">Sign Up</a>
             </li>
+            <br/>
+            <div id="roboto">Hello there.</div>
             {% endif %}
           </ul>
-
-          <br/><br/>
-          <a id="text-color" href="" class="brand-logo center">Charlotte.</a>
+          <a id="text-color-brand" href="" class="brand-logo center">Charlotte.</a>
       </nav>
     </div>
-    <br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
 
     <main>{% block content %} {% endblock %}</main>
   </body>

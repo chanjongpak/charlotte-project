@@ -1,14 +1,41 @@
+html {
+  font-family: Merriweather;
+  color: #222093;
+}
+
 #banner {
   background-color: #f8e7f8;
   color: #222093;
   height: 200px;
-  padding: 1px;
+  padding: 1em 3em;
+  box-shadow: none;
 }
 
-div > ul > li {
+#text-color-brand {
   color: #222093;
+  font-weight: bold;
 }
-
 #text-color {
   color: #222093;
+}
+#roboto {
+  font-family: Roboto;
+}
+body {
+  background-color: #f8e7f8;
+}
+
+#home {
+  padding: 0em 2em;
+}
+#title {
+  font-weight: bold;
+}
+
+.bg {
+  background-color: #f8e7f8;
+}
+
+#card-color {
+  background-color: #1f1f7c;
 }
