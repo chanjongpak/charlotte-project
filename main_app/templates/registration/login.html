@@ -1,6 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Log In</h1>
+<a id="text-color-brand">Charlotte.</a>
+
+<img src="/main_app/static/images/Charlotte..png" />
+
+<p id="roboto">Welcome back to the web!</p>
+
+<p id="text-color-brand">Charlotte.</p>
+
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %} {{ form.as_p }}
   <input type="submit" class="btn" value="login" />
