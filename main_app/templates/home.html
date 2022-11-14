@@ -50,8 +50,11 @@
       <h6>Browse events near you:</h6>
       <div class="card" id="card-color">
         <div class="card-content">
-            <input type="text" class="datepicker">
-          </input>
+            <div class="bg">
+                <input type="text" class="datepicker" placeholder="Date"></input>
+                <textarea id="textarea1" class="materialize-textarea">Location</textarea>
+                <textarea id="textarea1" class="materialize-textarea">Choose Topic of interest</textarea>
+            </div>
         </div>
       </div>
     </div>
@@ -63,7 +66,6 @@
     var elems = document.querySelectorAll(".datepicker");
     var instances = M.Datepicker.init(elems, {
       format: "yyyy-mm-dd",
-      defaultDate: new Date(),
       setDefaultDate: true,
       autoClose: true,
     });
