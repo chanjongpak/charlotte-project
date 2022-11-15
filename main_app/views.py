@@ -24,6 +24,9 @@ def signup(request):
 def home(request):
     return render(request, 'home.html')
 
+def saved_events(request):
+    return render(request, 'saved_events.html')
+
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
