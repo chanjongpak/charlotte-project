@@ -84,6 +84,8 @@ body {
 
 .active {
   color: #1f1f7c;
+  font-family: Roboto;
+  background-color: #f8e7f8;
 }
 
 #login-form {
@@ -91,5 +93,11 @@ body {
 }
 
 #login-button {
+  background-color: #f8e7f8;
+}
+
+label {
+  color: #1f1f7c;
+  font-family: Roboto;
   background-color: #f8e7f8;
 }
