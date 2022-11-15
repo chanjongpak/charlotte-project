@@ -23,6 +23,9 @@
           <ul>
             {% if user.is_authenticated %}
             <li class="right">
+              <a id="text-color" href="{% url 'add_event' %}">Create Event</a>
+            </li>
+            <li class="right">
               <a id="text-color" href="{% url 'logout' %}">Sign Out</a>
             </li>
             <br/>
