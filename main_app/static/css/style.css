@@ -45,7 +45,10 @@ body {
 .input-field label {
   color: #000;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 910af7dc785d07e9bc1d1da495b9b9473d0e230e
 .shadow {
   box-shadow: #1f1f7c 10px 10px 10px;
 }
@@ -81,6 +84,8 @@ body {
 
 .active {
   color: #1f1f7c;
+  font-family: Roboto;
+  background-color: #f8e7f8;
 }
 
 #login-form {
@@ -88,5 +93,11 @@ body {
 }
 
 #login-button {
+  background-color: #f8e7f8;
+}
+
+label {
+  color: #1f1f7c;
+  font-family: Roboto;
   background-color: #f8e7f8;
 }
