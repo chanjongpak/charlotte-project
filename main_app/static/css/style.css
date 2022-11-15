@@ -42,8 +42,6 @@ body {
   border-radius: 25px;
 }
 
-
-
 .input-field label {
   color: #000;
 }
@@ -87,4 +85,8 @@ body {
 
 #login-form {
   padding: 20px;
+}
+
+#login-button {
+  background-color: #f8e7f8;
 }
