@@ -42,6 +42,12 @@ body {
   border-radius: 25px;
 }
 
+
+
+.input-field label {
+  color: #000;
+}
+
 .shadow {
   box-shadow: #1f1f7c 10px 10px 10px;
 }
