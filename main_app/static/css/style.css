@@ -101,3 +101,8 @@ label {
   font-family: Roboto;
   background-color: #f8e7f8;
 }
+
+.link-color {
+  color: #e499cf;
+  font-weight: bold;
+}
