@@ -9,7 +9,7 @@
   <div class="col s12 m8 offset-m2">
     <div class="card" id="card-color">
       <form method="post" action="{% url 'login' %}">
-        <div class="bg">{% csrf_token %} {{ form.as_p }}</div>
+        <div class="bg" id="login-form">{% csrf_token %} {{ form.as_p }}</div>
         <input type="submit" class="btn" value="login" />
         <input type="hidden" name="next" value="{{ next }}" />
       </form>

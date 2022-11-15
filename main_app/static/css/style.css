@@ -59,9 +59,9 @@ body {
 }
 
 #logo {
-  max-width: 20%;
+  max-width: 40%;
   max-height: auto;
-  padding: -200px;
+  margin: -5em;
 }
 
 #card-cover.login-form {
@@ -79,4 +79,12 @@ body {
 
 #no-bottom-border {
   border-bottom: none;
+}
+
+.active {
+  color: #1f1f7c;
+}
+
+#login-form {
+  padding: 20px;
 }
