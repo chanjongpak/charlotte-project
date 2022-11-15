@@ -54,10 +54,42 @@ body {
 }
 
 #textarea1 {
-  opacity: 0.25;
+  opacity: 0.5;
   border-bottom: none;
+  color: #1f1f7c;
+}
+
+#logo {
+  max-width: 40%;
+  max-height: auto;
+  margin: -5em;
+}
+
+#card-cover.login-form {
+  padding: 1em;
+}
+
+#text-color-light {
+  color: #f8e7f8;
+}
+
+::placeholder {
+  color: #1f1f7c;
+  opacity: 0.5;
 }
 
 #no-bottom-border {
   border-bottom: none;
+}
+
+.active {
+  color: #1f1f7c;
+}
+
+#login-form {
+  padding: 20px;
+}
+
+#login-button {
+  background-color: #f8e7f8;
 }
