@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Saved Events</h1>
+<!-- For each x in savedEvents, create a new card in the row with the details -->
+<div class="row">
+  <div class="col s12 m5 offset-m1">
+    <a href="#">
+      <div class="card">
+        <div class="card-image">
+          <img src="../static/images/mars-summit-ss.png" />
+        </div>
+        <div class="card-content bg shadow">
+          <p id="title" class="center">Saved Event 1</p>
+          <p class="center">Mon, Nov 14, 6:00pm</p>
+          <br />
+          <p id="roboto">Location: Test Building</p>
+          <p id="roboto">Address: Toronto Rd</p>
+          <br />
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock %}
