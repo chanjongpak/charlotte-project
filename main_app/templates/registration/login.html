@@ -1,13 +1,22 @@
 {% extends 'base.html' %} {% block content %}
+<div class="row center">
+  <div id="card-content center col s4 valign-wrapper">
+    <img id="logo" src="/static/images/Charlotte..png" />
+  </div>
+  <p id="text-color-brand">Welcome back to the web!</p>
+</div>
 
-<div id="card-content"></div>
-<a id="text-color-brand">Charlotte.</a>
-<img src="/main_app/static/images/Charlotte..png" />
-<p id="text-color-brand">Welcome back to the web!</p>
-
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-  {% endblock %}
-</form>
+<div class="row center">
+  <div class="col s12 m8 offset-m2">
+    <div class="card" id="card-color">
+      <form method="post" action="{% url 'login' %}">
+        <div class="bg">{% csrf_token %} {{ form.as_p }}</div>
+        <input type="submit" class="btn" value="login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+      <br />
+      <div id="text-color-light">Don't have an account yet? Sign up.</div>
+      {% endblock %}
+    </div>
+  </div>
+</div>

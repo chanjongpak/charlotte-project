@@ -42,19 +42,35 @@ body {
   border-radius: 25px;
 }
 
-.input-field label {
-  color: #000;
-}
 .shadow {
   box-shadow: #1f1f7c 10px 10px 10px;
 }
 
 #textarea1 {
-  opacity: 0.25;
+  opacity: 0.5;
   border-bottom: none;
+  color: #1f1f7c;
+}
+
+#logo {
+  max-width: 20%;
+  max-height: auto;
+  padding: -200px;
+}
+
+#card-cover.login-form {
+  padding: 1em;
+}
+
+#text-color-light {
+  color: #f8e7f8;
+}
+
+::placeholder {
+  color: #1f1f7c;
+  opacity: 0.5;
 }
 
 #no-bottom-border {
   border-bottom: none;
 }
-
