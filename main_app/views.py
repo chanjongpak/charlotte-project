@@ -35,8 +35,10 @@ def event_detail(request, event_id):
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
+    success_url = '/events/saved/'
 
 class EventUpdate(UpdateView):
     model = Event
     fields = '__all__'
+    success_url = '/events/saved/'
 
