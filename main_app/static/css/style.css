@@ -25,6 +25,10 @@ body {
   background-color: #f8e7f8;
 }
 
+label {
+  font-size: 20px;
+}
+
 #home {
   padding: 0em 2em;
 }
@@ -44,6 +48,7 @@ body {
 
 .input-field label {
   color: #000;
+  font-size: 20px;
 }
 
 .shadow {
