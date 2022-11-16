@@ -48,7 +48,6 @@ class EventUpdate(UpdateView):
     fields = '__all__'
     success_url = '/events/saved/'
 
-<<<<<<< HEAD
 def add_photo(request, event_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
@@ -62,8 +61,3 @@ def add_photo(request, event_id):
         except:
             print('Error occurred uploading image to S3')
     return redirect('detail', event_id=event_id)
-=======
-class EventDelete(DeleteView):
-    model = Event
-    success_url = '/events/saved/'
->>>>>>> fe18ccefb203bacd844ab1daf119c1c48038929c
