@@ -5,8 +5,13 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from .models import Event
+from .models import Event, Photo
 from django.http import HttpResponseRedirect 
+import uuid
+import boto3
+
+S3_BASE_URL = 'https://s3.us-east-2.amazonaws.com/'
+BUCKET = 'charlotteapp'
 
 def signup(request):
     error_messsage = ''
@@ -44,6 +49,16 @@ class EventUpdate(UpdateView):
     fields = '__all__'
     success_url = '/events/saved/'
 
-class EventDelete(DeleteView):
-    model = Event
-    success_url = '/events/saved/'
+def add_photo(request, event_id):
+    photo_file = request.FILES.get('photo-file', None)
+    if photo_file:
+        s3 = boto3.client('s3')
+        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+        try:
+            s3.upload_fileobj(photo_file, BUCKET, key)
+            url = f"{S3_BASE_URL}{BUCKET}/{key}"
+            photo = Photo(url=url, event_id=event_id)
+            photo.save()
+        except:
+            print('Error occurred uploading image to S3')
+    return redirect('detail', event_id=event_id)
