@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <h1 class="center">My Events</h1>
+<hr />
 {% for event in events %}
 <!-- For each x in savedEvents, create a new card in the row with the details -->
 <div class="row">
@@ -20,4 +21,5 @@
     </a>
   </div>
 </div>
+
 {% endfor %} {% endblock %}
