@@ -14,18 +14,20 @@ CATEGORIES = (
     ('M', 'Marketing'),
 )
 # Create your models here.
+class Comment(models.Model):
+    text = models.CharField(max_length = 50)
+
 class Event(models.Model):
     name = models.CharField(max_length=50)
     date = models.DateField('Event Date')
     location = models.CharField(max_length=50)
     address = models.CharField(max_length=50)
     category = models.CharField(max_length=1, choices=CATEGORIES, default=CATEGORIES[0][0])
-    user = models.CharField(max_length=1)
-    
+    comments = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True)
+
     def __str__(self):
         return self.name
     
-
 class Photo(models.Model):
     url = models.CharField(max_length=200)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
