@@ -42,3 +42,7 @@ class EventUpdate(UpdateView):
     model = Event
     fields = '__all__'
     success_url = '/events/saved/'
+
+class EventDelete(DeleteView):
+    model = Event
+    success_url = '/events/saved/'
