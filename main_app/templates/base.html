@@ -28,6 +28,9 @@
             <li class="right">
               <a id="text-color" href="{% url 'logout' %}">Sign Out</a>
             </li>
+            <li class = "right">
+              <a id="text-color" href="{% url 'saved_events' %}">Saved Events</a>
+            </li>
             <br/>
             <div id="roboto">Welcome {{user}}!</div>
             {% else %}
@@ -47,5 +50,16 @@
     <br/><br/><br/><br/><br/><br/><br/>
 
     <main>{% block content %} {% endblock %}</main>
+    <script>
+    var selectEl = document.getElementById('id_category');
+      M.FormSelect.init(selectEl);
+      let selectOptionsEls = document.querySelectorAll('[id^="select-options"]')
+      for (let option of selectOptionsEls) {
+        option.childNodes.forEach(li => {
+          li.style.color = "#222093"
+        })
+       } 
+      // document.querySelector('.dropdown-trigger').style.color="#222093"
+    </script>
   </body>
 </html>

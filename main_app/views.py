@@ -25,19 +25,27 @@ def signup(request):
 def home(request):
     return render(request, 'home.html')
 
+def saved_events(request):
+    events = Event.objects.all()
+    return render(request, 'saved_events.html', { 'events': events })
+
+def event_detail(request, event_id):
+    event = Event.objects.get(id = event_id)
+    return render(request, 'events/detail.html', { 'event': event })
+
+
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
 
-# def contact_view(request):
-#     if request.method == 'POST':  
-#         form = ContactForm(request.POST) 
-#         if form.is_valid():  
-#             send_fields(
-#                 form.cleaned_data['name'],
-#                 form.cleaned_data['date']
-#             )
-#             return redirect('/success/')
-#     else: 
-#         form = ContactForm()
-#     return render(request, 'event_form.html', {'form': form})    
+def contact_view(request):
+    if request.method == 'POST':  
+        form = NewContactForm() 
+        if form.is_valid():  
+            form.save()
+            return redirect('/detail_form')
+    else: 
+        form = NewContactForm()
+    return render(request, 'event_form.html', {'form': form}) 
+
+# cj daddy take a look at this   
