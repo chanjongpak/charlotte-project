@@ -1,22 +1,23 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Saved Events</h1>
+<h1 class="center">My Events</h1>
+{% for event in events %}
 <!-- For each x in savedEvents, create a new card in the row with the details -->
 <div class="row">
-  <div class="col s12 m5 offset-m1">
-    {% for event in events %}
+  <div class="col s12 m8 offset-m2">
     <a href="{% url 'detail' event.id %}">
       <div class="card">
         <div class="card-content bg shadow">
+          <div class="card-image">
+            <img src="/static/images/mars-summit-ss.png" />
+          </div>
           <p id="title" class="center">{{ event.name }}</p>
-          <p class="center">{{ event.date }}</p>
+          <p class="center" id="title">{{ event.date }}</p>
           <br />
           <p id="roboto">{{ event.location }}</p>
           <p id="roboto">{{ event.address }}</p>
-          <br />
         </div>
       </div>
     </a>
-    {% endfor %}
   </div>
 </div>
-{% endblock %}
+{% endfor %} {% endblock %}

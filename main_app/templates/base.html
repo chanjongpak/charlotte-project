@@ -10,16 +10,24 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
       </style> 
+
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/style.css' %}"
     />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+      </style> 
+
   </head>
   <body>
     <div class="navbar-fixed s12 l3">
       <nav id="banner">
         <div class="nav-wrapper">
+          <div>
+            <img class="brand-logo center" width="150" src="/static/images/Charlotte..png" />
+          </div>
           <ul>
             {% if user.is_authenticated %}
             <li class="right">
@@ -50,10 +58,13 @@
             <div id="roboto">Hello there.</div>
             {% endif %}
           </ul>
-          <a id="text-color-brand" href="/" class="brand-logo center">Charlotte.</a>
-      </nav>
-    </div>
-    <br/><br/><br/><br/><br/><br/><br/>
+          <div>
+            <a id="text-color-brand" href="/" class="brand-logo center">Charlotte.</a>
+          </div>
+
+        </nav>
+      </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
     <main>{% block content %} {% endblock %}</main>
     <script>
