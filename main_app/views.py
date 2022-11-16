@@ -39,3 +39,4 @@ class EventCreate(LoginRequiredMixin, CreateView):
 class EventUpdate(UpdateView):
     model = Event
     fields = '__all__'
+
