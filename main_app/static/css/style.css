@@ -103,3 +103,7 @@ label {
   color: #e499cf;
   font-weight: bold;
 }
+
+.dropdown-trigger {
+  color: #1f1f7c;
+}
