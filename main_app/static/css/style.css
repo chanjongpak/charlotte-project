@@ -1,6 +1,8 @@
 html {
   font-family: Merriweather;
   color: #222093;
+  font-family: Roboto;
+  font-weight: 1000;
 }
 
 #banner {
@@ -9,6 +11,10 @@ html {
   height: 200px;
   padding: 1em 3em;
   box-shadow: none;
+}
+
+#banner a {
+  font-weight: 1000;
 }
 
 #text-color-brand {
@@ -20,6 +26,7 @@ html {
 }
 #roboto {
   font-family: Roboto;
+  color: #1f1f7c;
 }
 body {
   background-color: #f8e7f8;
@@ -30,6 +37,7 @@ body {
 }
 #title {
   font-weight: bold;
+  color: #1f1f7c;
 }
 
 .bg {
@@ -45,10 +53,7 @@ body {
 .input-field label {
   color: #000;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 910af7dc785d07e9bc1d1da495b9b9473d0e230e
 .shadow {
   box-shadow: #1f1f7c 10px 10px 10px;
 }
@@ -94,12 +99,19 @@ body {
 
 #login-button {
   background-color: #f8e7f8;
+  color: black;
 }
 
 label {
-  color: #1f1f7c;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
   font-family: Roboto;
   background-color: #f8e7f8;
+}
+
+input {
+  text-align: center;
 }
 
 .link-color {
