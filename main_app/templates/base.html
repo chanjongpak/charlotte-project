@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
-    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/style.css' %}"
+    />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
       </style> 
@@ -20,6 +20,9 @@
     <div class="navbar-fixed s12 l3">
       <nav id="banner">
         <div class="nav-wrapper">
+          <div>
+            <img class="brand-logo center" width="150" src="/static/images/Charlotte..png" />
+          </div>
           <ul>
             {% if user.is_authenticated %}
             <li class="right">
@@ -50,10 +53,13 @@
             <div id="roboto">Hello there.</div>
             {% endif %}
           </ul>
-          <a id="text-color-brand" href="/" class="brand-logo center">Charlotte.</a>
-      </nav>
-    </div>
-    <br/><br/><br/><br/><br/><br/><br/>
+          <div>
+            <a id="text-color-brand" href="/" class="brand-logo center">Charlotte.</a>
+          </div>
+
+        </nav>
+      </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
     <main>{% block content %} {% endblock %}</main>
     <script>
