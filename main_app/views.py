@@ -5,8 +5,13 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from .models import Event
+from .models import Event, Photo
 from django.http import HttpResponseRedirect 
+import uuid
+import boto3
+
+S3_BASE_URL = 'https://s3.us-east-2.amazonaws.com/'
+BUCKET = 'charlotteapp'
 
 def signup(request):
     error_messsage = ''
