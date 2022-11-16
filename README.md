@@ -24,12 +24,18 @@ Implementing of filter functionality to be able to query a search and return rel
 
 Being able to have record of user attended events allows for greater accessbility in finding other events by the same host and in being able to rate/review for future reference. Mostly a QOL change in pursuit of attaining the pinnacle of user experience.
 
-Addition of a map function that will both ask users for permission to access their location via location services and show pings on a map for events. User experience boils down to the readability of the content provided and the ease with which it is able to be digested, as such, ideally users will be able to eat with their eyes to be able to better gauge the location of any/all events. Being able to see where something is in regards to your current location is undoubtedly more useful than seeing a typed out address.
+Addition of a map function that will both ask users for permission to access their location via location services and show pings on a map for events relative to their current location. User experience boils down to the readability of the content provided and the ease with which it is able to be digested, as such, ideally users will be able to eat with their eyes to be able to better gauge the location of any/all events. Being able to see where something is in regards to your current location is undoubtedly more useful than seeing a typed out address.
+
+A messaging system of sorts where users may communicate with Event hosts and other users. This would allow for users to be able to reach out and ask questions they may have regarding other users' past attended events or hosts and their future events. The open line of communication is also something that aligns with any networking app's best interests (ie. LinkedIn, Facebook, etc.). Communication also allows for a feeling of community within the Charlotte. users.
 
 # Contributors
 
 Developers:
-Chanjong Pak, Donald Yang, Nicholas Allicock, Tyler Ro
+Chanjong Pak: https://github.com/chanjongpak,
+Donald Yang: https://github.com/donaldyang17,
+Nicholas Allicock: https://github.com/nallicock,
+Tyler Ro: https://github.com/tyler-ro,
 
 UX/UI Designers:
-Sarah Bradshaw, Jane Wong
+Sarah Bradshaw: https://www.linkedin.com/in/sarah-bradshaw-b53488228/,
+Jane Wong: https://www.linkedin.com/in/janehywong.
