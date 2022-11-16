@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .models import Event
+from django.http import HttpResponseRedirect 
 
 def signup(request):
     error_messsage = ''
@@ -41,4 +42,3 @@ class EventUpdate(UpdateView):
     model = Event
     fields = '__all__'
     success_url = '/events/saved/'
-
