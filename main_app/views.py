@@ -25,9 +25,6 @@ def home(request):
     return render(request, 'home.html')
 
 def saved_events(request):
-    return render(request, 'saved_events.html')
-
-def events_index(request):
     events = Event.objects.all()
     return render(request, 'saved_events.html', { 'events': events })
 
