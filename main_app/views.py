@@ -28,7 +28,8 @@ def signup(request):
     return render(request, 'registration/signup.html', context)
 
 def home(request):
-    return render(request, 'home.html')
+    events = Event.objects.all()
+    return render(request, 'home.html', {'events': events})
 
 def saved_events(request):
     events = Event.objects.all()

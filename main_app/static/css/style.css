@@ -9,12 +9,8 @@ html {
   background-color: #f8e7f8;
   color: #222093;
   height: 200px;
-  padding: 1em 3em;
   box-shadow: none;
-}
-
-#banner a {
-  font-weight: 1000;
+  padding: 0em 2em;
 }
 
 #text-color-brand {
@@ -70,6 +66,10 @@ body {
   margin: -5em;
 }
 
+.brand-logo {
+  margin-left: -1em;
+}
+
 #card-cover.login-form {
   padding: 1em;
 }
@@ -121,4 +121,8 @@ input {
 
 .dropdown-trigger {
   color: #1f1f7c;
+}
+
+hr {
+  border: 1px solid #1f1f7c;
 }
