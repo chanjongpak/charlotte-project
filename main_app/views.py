@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .models import Event
+from django.http import HttpResponseRedirect 
 
 def signup(request):
     error_messsage = ''
@@ -35,6 +36,17 @@ def event_detail(request, event_id):
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
+
+def contact_view(request):
+    if request.method == 'POST':  
+        form = NewContactForm() 
+        if form.is_valid():  
+            form.save()
+            return redirect('/detail_form')
+    else: 
+        form = NewContactForm()
+    return render(request, 'event_form.html', {'form': form}) 
+
 
 class EventUpdate(UpdateView):
     model = Event
