@@ -33,7 +33,6 @@ def event_detail(request, event_id):
     event = Event.objects.get(id = event_id)
     return render(request, 'events/detail.html', { 'event': event })
 
-
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
@@ -48,4 +47,7 @@ def contact_view(request):
         form = NewContactForm()
     return render(request, 'event_form.html', {'form': form}) 
 
-# cj daddy take a look at this   
+
+class EventUpdate(UpdateView):
+    model = Event
+    fields = '__all__'
