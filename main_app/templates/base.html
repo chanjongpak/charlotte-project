@@ -10,17 +10,21 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
       </style> 
+
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/style.css' %}"
     />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+      </style> 
   </head>
-  <body>
-    <div class="navbar-fixed s12 l3">
+  <body id="home">
+    <div class="navbar-fixed s12">
       <nav id="banner">
         <div class="nav-wrapper">
-          <ul>
+            <ul>
             {% if user.is_authenticated %}
             <li class="right">
               <a id="text-color" href="{% url 'events_create' %}">Create Event</a>
@@ -50,10 +54,12 @@
             <div id="roboto">Hello there.</div>
             {% endif %}
           </ul>
-          <a id="text-color-brand" href="/" class="brand-logo center">Charlotte.</a>
-      </nav>
-    </div>
-    <br/><br/><br/><br/><br/><br/><br/>
+          <div>
+            <a id="text-color-brand" href="/" class="brand-logo">Charlotte.</a>
+          </div>
+        </nav>
+      </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
     <main>{% block content %} {% endblock %}</main>
     <script>
@@ -64,7 +70,18 @@
         option.childNodes.forEach(li => {
           li.style.color = "#222093"
         })
-       } 
+       }
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.getElementById("id_date");
+    var instances = M.Datepicker.init(elems, {
+      format: "yyyy-mm-dd",
+      setDefaultDate: true,
+      autoClose: true,
+      opacity: 1,
+        });
+     });
+
       // document.querySelector('.dropdown-trigger').style.color="#222093"
     </script>
   </body>
