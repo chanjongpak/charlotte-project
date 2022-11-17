@@ -97,7 +97,7 @@
         {% for comment in event.comment_set.all %}
         <tr>
           <td>{{comment.comment}}</td>
-          <td>{{event.user}}</td>
+          <td>{{comment.user}}</td>
         </tr>
         {% endfor %}
       </tbody>
