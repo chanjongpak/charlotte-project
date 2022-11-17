@@ -26,7 +26,7 @@ class Event(models.Model):
     comments = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.get_category_display()} on {self.date}"
     
 class Photo(models.Model):
     url = models.CharField(max_length=200)
