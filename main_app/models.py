@@ -14,8 +14,6 @@ CATEGORIES = (
     ('M', 'Marketing'),
 )
 # Create your models here.
-class Comment(models.Model):
-    text = models.CharField(max_length = 100)
 
 class Event(models.Model):
     name = models.CharField(max_length=50)
@@ -23,7 +21,6 @@ class Event(models.Model):
     location = models.CharField(max_length=50)
     address = models.CharField(max_length=50)
     category = models.CharField(max_length=1, choices=CATEGORIES, default=CATEGORIES[0][0])
-    comments = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
