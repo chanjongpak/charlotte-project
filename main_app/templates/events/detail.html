@@ -42,8 +42,7 @@
     </form>
   </div>
 </div>
-<<<<<<< HEAD
-
+{% endif %}
 <form action="{% url 'add_comment' event.id %}" method="post">
   {% csrf_token %} {{comment_form.as_p}}
   <input type="submit" class="btn" value="Add Comment" />
@@ -65,6 +64,3 @@
 </table>
 
 {% endblock %}
-=======
-{% else %} {% endif %} {% endblock %}
->>>>>>> a80ad481eae935bcc03f62bc5f1314eae9e2a0f3
