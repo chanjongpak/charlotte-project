@@ -28,6 +28,10 @@ class Event(models.Model):
 
     def __str__(self):
         return f"{self.get_category_display()} on {self.date}"
+
+class Comment(models.Model):
+    comment = models.CharField(max_length = 50)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True)
     
 class Photo(models.Model):
     url = models.CharField(max_length=200)
