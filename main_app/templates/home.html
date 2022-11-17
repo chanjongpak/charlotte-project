@@ -22,7 +22,7 @@
             <br />
             <p id="roboto">{{ event.location }}</p>
             <p id="roboto">{{ event.address }}</p>
-            <p id="roboto">Event Category:{{ event.category }}</p>
+            <p id="roboto">Event Category: {{event.get_category_display}}</p>
           </div>
         </div>
       </a>

@@ -39,7 +39,8 @@ def saved_events(request):
 
 def event_detail(request, event_id):
     event = Event.objects.get(id = event_id)
-    return render(request, 'events/detail.html', { 'event': event })
+    comment_form = CommentForm()
+    return render(request, 'events/detail.html', { 'event': event, 'comment_form': comment_form })
 
 def add_comment(request, event_id):
     form = CommentForm(request.POST)
