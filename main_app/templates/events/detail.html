@@ -27,6 +27,7 @@
       </div>
     </div>
     <br />
+    {% if event.user == user %}
     <div class="col s12 m5">
       <form
         action="{% url 'add_photo' event.id %}"
@@ -39,7 +40,7 @@
       </form>
     </div>
   </div>
-  {% if event.user == user %} {% endif %}
+  {% endif %}
 
   <div class="col s12 m5">
     <form action="{% url 'add_comment' event.id %}" method="post">
@@ -56,7 +57,7 @@
         {% for comment in event.comment_set.all %}
         <tr>
           <td>{{comment.comment}}</td>
-          <td>{{event.user}}</td>
+          <td>{{comment.user}}</td>
         </tr>
         {% endfor %}
       </tbody>

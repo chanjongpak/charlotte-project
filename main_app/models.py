@@ -29,6 +29,8 @@ class Event(models.Model):
 class Comment(models.Model):
     comment = models.CharField(max_length = 50)
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     
 class Photo(models.Model):
     url = models.CharField(max_length=200)

@@ -40,6 +40,7 @@ def saved_events(request):
 def event_detail(request, event_id):
     event = Event.objects.get(id = event_id)
     comment_form = CommentForm()
+    print(event)
     return render(request, 'events/detail.html', { 'event': event, 'comment_form': comment_form })
 
 @login_required
@@ -48,6 +49,7 @@ def add_comment(request, event_id):
     if form.is_valid():
         new_comment = form.save(commit=False)
         new_comment.event_id = event_id
+        new_comment.user = request.user
         new_comment.save()
     return redirect('detail', event_id = event_id)
 
