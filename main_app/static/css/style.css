@@ -135,3 +135,7 @@ hr {
   background-color: #1f1f7c;
   color: #f8e7f8;
 }
+
+.brand-logo {
+  margin-left: -1em;
+}
