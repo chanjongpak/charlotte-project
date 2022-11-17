@@ -65,6 +65,10 @@ class EventDelete(DeleteView):
     fields = '__all__'
     success_url = '/events/saved/'
 
+class EventDelete(DeleteView):
+    model = Event
+    success_url = '/events/saved/'
+
 def add_photo(request, event_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:

@@ -1,7 +1,7 @@
 html {
   color: #222093;
   font-family: Roboto;
-  font-weight: 1000;
+  font-weight: bolder;
 }
 
 #banner {
@@ -40,6 +40,8 @@ body {
 }
 #title {
   font-weight: bold;
+  color: #1f1f7c;
+  font-size: large;
 }
 
 .bg {
@@ -123,4 +125,12 @@ input {
 
 .dropdown-trigger {
   color: #1f1f7c;
+}
+hr {
+  border: 1px solid #1f1f7c;
+}
+
+.btn {
+  background-color: #1f1f7c;
+  color: #f8e7f8;
 }
