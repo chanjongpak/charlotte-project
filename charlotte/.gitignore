@@ -1,5 +1,5 @@
-.env
+*.env
 *.pyc
-/migrations/
-!/migrations
-!/migrations/init.py
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
