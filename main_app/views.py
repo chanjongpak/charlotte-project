@@ -56,12 +56,17 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 class EventUpdate(UpdateView):
     model = Event
+    template_name = 'events/update.html'
     fields = ['name', 'date', 'location', 'address', 'category']
     success_url = '/events/saved/'
 
 class EventDelete(DeleteView):
     model = Event
     fields = '__all__'
+    success_url = '/events/saved/'
+
+class EventDelete(DeleteView):
+    model = Event
     success_url = '/events/saved/'
 
 def add_photo(request, event_id):

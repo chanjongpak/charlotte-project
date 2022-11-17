@@ -1,30 +1,38 @@
 html {
   color: #222093;
   font-family: Roboto;
-  font-weight: 1000;
+  font-weight: bolder;
 }
 
 #banner {
   background-color: #f8e7f8;
   color: #222093;
   height: 200px;
+  padding: 1em 3em;
   box-shadow: none;
-  padding: 0em 2em;
+}
+
+#banner a {
+  font-weight: 1000;
 }
 
 #text-color-brand {
   color: #222093;
   font-weight: bold;
 }
+
 #text-color {
   color: #222093;
 }
 #roboto {
   font-family: Roboto;
-  color: #1f1f7c;
 }
 body {
   background-color: #f8e7f8;
+}
+
+.detailContainer {
+  text-align: center;
 }
 
 #home {
@@ -33,6 +41,7 @@ body {
 #title {
   font-weight: bold;
   color: #1f1f7c;
+  font-size: large;
 }
 
 .bg {
@@ -63,10 +72,6 @@ body {
   max-width: 40%;
   max-height: auto;
   margin: -5em;
-}
-
-.brand-logo {
-  margin-left: -1em;
 }
 
 #card-cover.login-form {
@@ -121,7 +126,11 @@ input {
 .dropdown-trigger {
   color: #1f1f7c;
 }
-
 hr {
   border: 1px solid #1f1f7c;
+}
+
+.btn {
+  background-color: #1f1f7c;
+  color: #f8e7f8;
 }
