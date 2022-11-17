@@ -65,4 +65,24 @@
   </div>
 </div>
 
+<form action="{% url 'add_comment' event.id %}" method="post">
+  {% csrf_token %} {{comment_form.as_p}}
+  <input type="submit" class="btn" value="Add Comment" />
+</form>
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for comment in event.comment_set.all %}
+    <tr>
+      <td>{{comment.comment}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 {% endblock %}

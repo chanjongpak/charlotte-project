@@ -40,7 +40,6 @@ def saved_events(request):
 def event_detail(request, event_id):
     event = Event.objects.get(id = event_id)
     comment_form = CommentForm()
-    print(event)
     return render(request, 'events/detail.html', { 'event': event, 'comment_form': comment_form })
 
 @login_required
