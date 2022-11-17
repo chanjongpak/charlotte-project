@@ -42,7 +42,7 @@
     </form>
   </div>
 </div>
-{% else %} {% endif %}
+{% endif %}
 
 <form action="{% url 'add_comment' event.id %}" method="post">
   {% csrf_token %} {{comment_form.as_p}}
