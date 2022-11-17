@@ -46,6 +46,22 @@
     <form action="{% url 'add_comment' event.id %}" method="post">
       {% csrf_token %} {{comment_form.as_p}}
       <input type="submit" class="btn" value="Add Comment" />
+</div>
+{% if event.user == user %}
+<div class="row">
+  <div class="col s12 m4 offset-m4">
+    <form
+      action="{% url 'add_photo' event.id %}"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      {% csrf_token %}
+      <input type="submit" class="btn" value="Upload Photo" />
+      <input type="file" name="photo-file" />
+      <form action="{% url 'add_comment' event.id %}" method="post">
+        {% csrf_token %} {{comment_form.as_p}}
+        <input type="submit" class="btn" value="Add Comment" />
+      </form>
     </form>
     <table class="striped">
       <thead>
@@ -64,29 +80,30 @@
     </table>
   </div>
 </div>
-<<<<<<< HEAD
-
-=======
 {% endif %}
->>>>>>> a53bf5a (pulled from main)
-<form action="{% url 'add_comment' event.id %}" method="post">
-  {% csrf_token %} {{comment_form.as_p}}
-  <input type="submit" class="btn" value="Add Comment" />
-</form>
 
-<table class="striped">
-  <thead>
-    <tr>
-      <th>Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for comment in event.comment_set.all %}
-    <tr>
-      <td>{{comment.comment}}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="row">
+  <div class="col s12 m4 offset-m4">
+    <form action="{% url 'add_comment' event.id %}" method="post">
+      {% csrf_token %} {{comment_form.as_p}}
+      <input type="submit" class="btn" value="Add Comment" />
+    </form>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Comments:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for comment in event.comment_set.all %}
+        <tr>
+          <td>{{comment.comment}}</td>
+          <td>{{</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 
 {% endblock %}
