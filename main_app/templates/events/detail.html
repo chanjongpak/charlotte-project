@@ -64,7 +64,11 @@
     </table>
   </div>
 </div>
+<<<<<<< HEAD
 
+=======
+{% endif %}
+>>>>>>> a53bf5a (pulled from main)
 <form action="{% url 'add_comment' event.id %}" method="post">
   {% csrf_token %} {{comment_form.as_p}}
   <input type="submit" class="btn" value="Add Comment" />

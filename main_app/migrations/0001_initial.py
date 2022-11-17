@@ -24,6 +24,7 @@ class Migration(migrations.Migration):
                 ('address', models.CharField(max_length=50)),
                 ('category', models.CharField(choices=[('B', 'Business Meeting'), ('U', 'UXDI'), ('S', 'Software Engineer'), ('D', 'Designer'), ('F', 'Finance'), ('R', 'Real Estate'), ('I', 'Self-Improvement'), ('M', 'Marketing')], default='B', max_length=1)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (pulled from main)
             ],
         ),
         migrations.CreateModel(
