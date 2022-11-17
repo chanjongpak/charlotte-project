@@ -14,6 +14,8 @@ CATEGORIES = (
     ('M', 'Marketing'),
 )
 # Create your models here.
+class Comment(models.Model):
+    text = models.CharField(max_length = 100)
 
 class Event(models.Model):
     name = models.CharField(max_length=50)
