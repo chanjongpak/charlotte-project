@@ -1,7 +1,7 @@
 html {
   color: #222093;
   font-family: Roboto;
-  font-weight: 1000;
+  font-weight: bolder;
 }
 
 #banner {
@@ -31,8 +31,8 @@ body {
   padding: 0em 2em;
 }
 #title {
-  font-weight: bold;
   color: #1f1f7c;
+  font-size: large;
 }
 
 .bg {
@@ -124,4 +124,9 @@ input {
 
 hr {
   border: 1px solid #1f1f7c;
+}
+
+.btn {
+  background-color: #1f1f7c;
+  color: #f8e7f8;
 }
