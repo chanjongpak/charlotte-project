@@ -20,12 +20,15 @@
         <p id="roboto">Location: {{ event.location }}</p>
         <p id="roboto">Address: {{ event.address }}</p>
         <p id="roboto">Category: {{event.get_category_display}}</p>
+        {% if event.user == user %}
         <a class="btn" href="update/">UPDATE</a>
         <a class="btn" href="delete/">DELETE</a>
+        {% else %} {% endif %}
       </div>
     </div>
   </div>
 </div>
+{% if event.user == user %}
 <div class="row">
   <div class="col s12 m4 offset-m4">
     <form
@@ -39,6 +42,7 @@
     </form>
   </div>
 </div>
+<<<<<<< HEAD
 
 <form action="{% url 'add_comment' event.id %}" method="post">
   {% csrf_token %} {{comment_form.as_p}}
@@ -61,3 +65,6 @@
 </table>
 
 {% endblock %}
+=======
+{% else %} {% endif %} {% endblock %}
+>>>>>>> a80ad481eae935bcc03f62bc5f1314eae9e2a0f3
