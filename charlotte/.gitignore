@@ -1,2 +1,10 @@
+<<<<<<< HEAD
+*.env
+*.pyc
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+=======
 .env
 *.pyc
+>>>>>>> a80ad481eae935bcc03f62bc5f1314eae9e2a0f3
