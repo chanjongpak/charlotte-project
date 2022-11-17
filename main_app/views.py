@@ -5,9 +5,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from .models import Event
 from .forms import CommentForm
-from .models import Event, Photo
+from .models import Event, Photo, User
 from django.http import HttpResponseRedirect 
 import uuid
 import boto3
@@ -33,14 +32,16 @@ def home(request):
     events = Event.objects.all()
     return render(request, 'home.html', {'events': events})
 
+@login_required
 def saved_events(request):
-    events = Event.objects.all()
+    events = Event.objects.filter(user=request.user)
     return render(request, 'saved_events.html', { 'events': events })
 
 def event_detail(request, event_id):
     event = Event.objects.get(id = event_id)
     return render(request, 'events/detail.html', { 'event': event })
 
+@login_required
 def add_comment(request, event_id):
     form = CommentForm(request.POST)
     if form.is_valid():
@@ -54,21 +55,22 @@ class EventCreate(LoginRequiredMixin, CreateView):
     fields = ['name', 'date', 'location', 'address', 'category']
     success_url = '/events/saved/'
 
-class EventUpdate(UpdateView):
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+class EventUpdate(LoginRequiredMixin, UpdateView):
     model = Event
     template_name = 'events/update.html'
     fields = ['name', 'date', 'location', 'address', 'category']
     success_url = '/events/saved/'
 
-class EventDelete(DeleteView):
+class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
     fields = '__all__'
     success_url = '/events/saved/'
 
-class EventDelete(DeleteView):
-    model = Event
-    success_url = '/events/saved/'
-
+@login_required
 def add_photo(request, event_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:

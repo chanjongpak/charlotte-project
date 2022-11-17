@@ -24,6 +24,7 @@ class Event(models.Model):
     address = models.CharField(max_length=50)
     category = models.CharField(max_length=1, choices=CATEGORIES, default=CATEGORIES[0][0])
     comments = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.get_category_display()} on {self.date}"

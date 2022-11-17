@@ -20,12 +20,15 @@
         <p id="roboto">Location: {{ event.location }}</p>
         <p id="roboto">Address: {{ event.address }}</p>
         <p id="roboto">Category: {{event.get_category_display}}</p>
+        {% if user.is_authenticated %}
         <a class="btn" href="update/">UPDATE</a>
         <a class="btn" href="delete/">DELETE</a>
+        {% else %} {% endif %}
       </div>
     </div>
   </div>
 </div>
+{% if user.is_authenticated %}
 <div class="row">
   <div class="col s12 m4 offset-m4">
     <form
@@ -39,5 +42,4 @@
     </form>
   </div>
 </div>
-
-{% endblock %}
+{% else %} {% endif %} {% endblock %}
