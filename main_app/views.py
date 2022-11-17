@@ -56,6 +56,7 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 class EventUpdate(UpdateView):
     model = Event
+    template_name = 'events/update.html'
     fields = ['name', 'date', 'location', 'address', 'category']
     success_url = '/events/saved/'
 

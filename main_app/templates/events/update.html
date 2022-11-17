@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row center">
+  <div id="card-content center col s4 valign-wrapper">
+    <img id="logo" src="/static/images/Charlotte..png" />
+  </div>
+  <h2 id="text-color-brand">Update An Event!</h2>
+</div>
+<div class="row center">
+  <div class="col s12 m8 offset-m2">
+    <div class="card" id="card-color">
+      <form method="post" id="login-form" action="">
+        <div class="bg" id="login-form">
+          {% csrf_token %} {{ form.as_table }}
+        </div>
+        <br />
+        <input type="submit" class="btn" id="login-button" value="Update" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
