@@ -4,13 +4,15 @@ Charlotte. is the networking web YOU need to break into the Tech sector! At what
 
 # Screenshots
 
-
->>>>>>> 267a81cf085f960bbad31b92d110ebfba188a3cd
+<img src="/first.png/">
+<img src="/second.png/">
+<img src="/third.png/">
+<img src="/fourth.png/">
+<img src="/fifth.png/">
 
 # Technologies Used
 
 Charlotte. makes use of Django, Python, PostreSQL, AWS S3, HTML5, and CSS.
-
 
 # Getting Started
 
@@ -21,7 +23,6 @@ Link to Trello Board: https://trello.com/b/9FiBSef6/charlotte
 Link to Wireframes: https://app.zeplin.io/project/6370291d6b5d921cc03a0007/dashboard
 
 Link to Style Guide: https://imgur.com/a/HXqfYbc
-
 
 # Next Steps for Charlotte.
 
