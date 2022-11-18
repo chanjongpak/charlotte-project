@@ -8,7 +8,7 @@
 <div class="row center">
   <div class="col s12 m8 offset-m2">
     <div class="card" id="card-color">
-      <form method="post" id="login-form" action="{% url 'login' %}">
+      <form method="post" id="login-form" action="{% url 'signup' %}">
         <div class="bg" id="login-form">{% csrf_token %} {{ form.as_p }}</div>
         <br />
         <input type="submit" class="btn" id="login-button" value="Sign Up" />
