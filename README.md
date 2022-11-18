@@ -4,11 +4,11 @@ Charlotte. is the networking web YOU need to break into the Tech sector! At what
 
 # Screenshots
 
-<img src="/first.png/">
-<img src="/second.png/">
-<img src="/third.png/">
-<img src="/fourth.png/">
-<img src="/fifth.png/">
+<img src="./main_app/static/images/first.png/">
+<img src="./main_app/static/images/second.png/">
+<img src="./main_app/static/images/third.png/">
+<img src="./main_app/static/images/fourth.png/">
+<img src="./main_app/static/images/fifth.png/">
 
 # Technologies Used
 
