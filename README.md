@@ -12,7 +12,7 @@ Charlotte. is the networking web YOU need to break into the Tech sector! At what
 
 # Technologies Used
 
-Charlotte. makes use of Django, Python, PostreSQL, AWS S3, HTML5, and CSS.
+Charlotte. makes use of Django, Python, PostreSQL, AWS S3, HTML, and CSS.
 
 # Getting Started
 
