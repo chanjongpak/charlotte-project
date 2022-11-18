@@ -4,6 +4,7 @@ Charlotte. is the networking web YOU need to break into the Tech sector! At what
 
 # Screenshots
 
+<img src="/static/images/first.png/">
 
 
 # Technologies Used
